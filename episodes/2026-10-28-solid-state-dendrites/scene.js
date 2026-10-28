@@ -1,4 +1,4 @@
-// Episode: Why solid-state batteries crack
+// Episode: Why solid-state batteries crack (Polish on-screen text)
 export function build(E) {
   const { THREE, add, box, rbox, cyl, M, mat, PAL, canvasTex, lib, ease, clamp, lerp, B, rng } = E;
   const r = rng(11);
@@ -122,22 +122,22 @@ export function build(E) {
   spark.add(sparkBits); const dirs = [...Array(26)].map(() => new THREE.Vector3(r() - .5, r() * .9, r() - .5).normalize().multiplyScalar(1.2 + r() * 1.6));
   const dmy = new THREE.Object3D();
 
-  // ---------- labels & callouts ----------
-  E.label({ text: 'ANODE  −', anchor: tabA, beat: 1, at: .9, dy: -70 });
-  E.label({ text: 'CATHODE  +', anchor: tabC, beat: 1, at: 1.1, dy: -70 });
+  // ---------- labels & callouts (Polish) ----------
+  E.label({ text: 'ANODA  −', anchor: tabA, beat: 1, at: .9, dy: -70 });
+  E.label({ text: 'KATODA  +', anchor: tabC, beat: 1, at: 1.1, dy: -70 });
   const liqTop = new THREE.Object3D(); liqTop.position.set(-1.2, H - .1, .9); cell.add(liqTop);
-  E.callout({ t: 'LIQUID ELECTROLYTE', s: 'flammable solvent', red: true, anchor: liqTop, card: [50, 600], beat: 1, at: 1.6 });
+  E.callout({ t: 'CIEKŁY ELEKTROLIT', s: 'łatwopalny', red: true, anchor: liqTop, card: [50, 600], beat: 1, at: 1.6 });
   const ionPt = new THREE.Object3D(); ionPt.position.set(.3, .95, 1.15); cell.add(ionPt);
-  E.callout({ t: 'LITHIUM IONS', s: 'carry the charge', anchor: ionPt, card: [600, 600], beat: 1, at: 2.4 });
+  E.callout({ t: 'JONY LITU', s: 'niosą ładunek', anchor: ionPt, card: [600, 600], beat: 1, at: 2.4 });
   const liTop = new THREE.Object3D(); liTop.position.set(cx(X.an0, X.el0), H + .02, .6); cell.add(liTop);
-  E.callout({ t: 'LITHIUM METAL', s: 'more energy, same space', anchor: liTop, card: [40, 600], beat: 2, at: 2.4 });
+  E.callout({ t: 'CZYSTY LIT', s: 'więcej energii', anchor: liTop, card: [40, 600], beat: 2, at: 2.4 });
   const cerTop = new THREE.Object3D(); cerTop.position.set(-.3, H + .02, .6); cell.add(cerTop);
-  E.callout({ t: 'SOLID CERAMIC', s: 'nothing to leak', anchor: cerTop, card: [600, 600], beat: 2, at: 1.6 });
-  E.callout({ t: 'DENDRITE', s: 'a lithium filament', anchor: tipObj, card: [600, 610], beat: 3, at: 1.6 });
+  E.callout({ t: 'CERAMIKA', s: 'nic nie wycieka', anchor: cerTop, card: [600, 600], beat: 2, at: 1.6 });
+  E.callout({ t: 'DENDRYT', s: 'włókno z litu', anchor: tipObj, card: [600, 610], beat: 3, at: 1.6 });
   const crackPt = new THREE.Object3D(); cell.add(crackPt);
-  E.callout({ t: 'CRACK', s: 'pressure splits the ceramic', anchor: crackPt, card: [40, 600], beat: 4, at: B.d(4) * .35 });
+  E.callout({ t: 'PĘKNIĘCIE', s: 'ciśnienie rozsadza ceramikę', anchor: crackPt, card: [40, 600], beat: 4, at: B.d(4) * .35 });
   const shortAt = B.d(4) * .74;
-  E.callout({ t: 'SHORT CIRCUIT', s: 'the cell fails', red: true, anchor: spark, card: [600, 690], beat: 4, at: shortAt + .15 });
+  E.callout({ t: 'ZWARCIE', s: 'ogniwo pada', red: true, anchor: spark, card: [600, 690], beat: 4, at: shortAt + .15 });
   E.sfx(B.s(4) + shortAt, 'thud'); E.sfx(B.s(4) + shortAt, 'power'); E.sfx(B.s(4) + shortAt - .05, 'rise');
   E.sfx(B.s(2) + .9, 'pop');
 
