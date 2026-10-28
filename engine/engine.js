@@ -8,7 +8,7 @@ import { makeLib } from './lib.js';
 const W = 1080, H = 1920;
 const EP = new URLSearchParams(location.search).get('ep');
 await Promise.all(['500 30px Mono', '700 30px Mono', 'italic 100px Serif', '700 90px Grot', '500 30px Grot']
-  .map(f => document.fonts.load(f, 'Aa0')));
+  .map(f => document.fonts.load(f, 'Aa0ąęłśżźćńó')));
 const episode = await (await fetch(`/${EP}/episode.json`)).json();
 const timeline = await (await fetch(`/${EP}/timeline.json`)).json();
 
