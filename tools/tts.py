@@ -5,7 +5,9 @@
 
 ElevenLabs (default when ELEVENLABS_API_KEY is set):
   env ELEVENLABS_API_KEY, ELEVENLABS_VOICE_ID, optional ELEVENLABS_MODEL (default eleven_multilingual_v2)
-Piper (free local fallback): downloads en_US-ryan-high into ~/.piper on first use.
+Piper (free local fallback): downloads en_US-ljspeech-high into ~/.piper on first use.
+  Voice trained on the public-domain LJ Speech dataset (safe for commercial use; do NOT switch to
+  voices whose model card says NC / non-commercial).
 
 Writes <dir>/voice.wav (48 kHz mono, with lead-in) and <dir>/timeline.json:
   {duration, lead, engine, beats:[{start,end}], words:[{w,s,e,beat}]}
@@ -73,10 +75,10 @@ def elevenlabs(text, ep):
 
 
 def piper_voice():
-    d = os.path.expanduser('~/.piper'); m = os.path.join(d, 'en_US-ryan-high.onnx')
+    d = os.path.expanduser('~/.piper'); m = os.path.join(d, 'en_US-ljspeech-high.onnx')
     if not os.path.exists(m):
         os.makedirs(d, exist_ok=True)
-        sh(sys.executable, '-m', 'piper.download_voices', 'en_US-ryan-high', '--data-dir', d)
+        sh(sys.executable, '-m', 'piper.download_voices', 'en_US-ljspeech-high', '--data-dir', d)
     return m
 
 
@@ -86,7 +88,7 @@ def piper(beats, ep):
     for i, b in enumerate(beats):
         vo = re.sub(r'\s+', ' ', b['vo'].strip())
         raw = os.path.join(ep, f'_p{i}.wav')
-        subprocess.run([sys.executable, '-m', 'piper', '-m', model, '-f', raw], input=vo.encode(), check=True, capture_output=True)
+        subprocess.run([sys.executable, '-m', 'piper', '-m', model, '--length-scale', '0.87', '-f', raw], input=vo.encode(), check=True, capture_output=True)
         a, sr = wav_read(raw)
         if sr != SR:
             r48 = raw.replace('.wav', '_48.wav'); to48k(raw, r48); a, _ = wav_read(r48); os.remove(r48)
