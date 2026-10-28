@@ -1,8 +1,12 @@
 # Daily reel playbook
 
-One run = one finished English reel (1080x1920, 30 fps, 30 to 45 s) about a technical topic, explained with an
-original 3D animation, a voice-over, word-by-word subtitles and a music bed. The finished MP4 plus the
-Instagram caption are sent to the owner, who publishes by hand.
+One run = one finished **Polish-language** reel (1080x1920, 30 fps, 35 to 48 s) about a technical topic, explained
+with an original 3D animation, a Polish voice-over, word-by-word subtitles and a music bed. The finished MP4 plus the
+Polish Instagram caption are sent to the owner, who publishes by hand.
+
+Everything the viewer sees or hears is in Polish: voice-over, headlines, tags, callouts, labels, CTA, caption.
+Research can use English sources (most tech news is in English). Keep `title`, `concept` and `keywords` in
+`episode.json` / `topics.json` in **English** so the duplicate checker keeps working across all episodes.
 
 Follow the steps in order. Do not skip the duplicate check or the visual QA.
 
@@ -27,7 +31,7 @@ university press releases, company engineering blogs. Use WebSearch (mode "exten
 Collect 5 to 8 candidates, then score each 1-5 on:
 - **Visual**: can it be shown with simple 3D objects in motion (layers, flows, parts, mechanisms)? This weighs double.
 - **Curiosity**: would a non-engineer stop scrolling for it?
-- **Clarity**: can it be explained correctly in under 110 spoken words?
+- **Clarity**: can it be explained correctly in under 95 spoken Polish words?
 - **Safety**: low risk of getting a fact wrong. Avoid pure business news, rumours, politics, crypto prices.
 
 ### Duplicate check (mandatory)
@@ -49,15 +53,21 @@ official when possible). Keep the numbers you are not sure about out of the scri
 
 Create `episodes/<YYYY-MM-DD>-<slug>/episode.json` (copy the shape of the most recent episode):
 
-- `beats`: 5 to 7 beats. Each has `tag` (2-3 words, shown in caps), `headline` (array of 2 short lines, max ~18
+- Add `"language": "pl"`.
+- `beats`: 5 to 7 beats. Each has `tag` (1-3 words, shown in caps), `headline` (array of 2 short lines, max ~20
   characters each; wrap one key word in `<i>` for the teal italic accent or `<i class="r">` for red),
-  `vo` (spoken text), `visual` (what the 3D scene does).
-- Total spoken text **85 to 110 words** (about 30 to 40 s).
-- Beat 1 is the hook: a surprising claim or question in the first sentence, no greeting, no "Did you know".
-- Last beat ends with: "Follow for a new tech explainer every day." and `cta` = "Follow for daily tech, explained in 3D".
-- Plain spoken English, short sentences, concrete images ("like a root splitting rock"). No hype words.
-- `caption`: 2-4 sentences that add one extra fact, then a question to drive comments. `hashtags`: 8-10, mixed broad
-  and specific. No brand names in hashtags.
+  `vo` (spoken Polish text), `visual` (what the 3D scene does, may be English).
+- Total spoken text **80 to 95 Polish words** (about 38 to 46 s). Polish words are longer than English ones.
+- Beat 1 is the hook: a surprising claim or question in the first sentence, no greeting, no "Czy wiesz, że".
+- Last beat ends with: "Obserwuj, codziennie nowa technologia w 3D." and `cta` = "Obserwuj: codziennie technologia w 3D".
+- Natural spoken Polish, the way a person explains something to a friend: concrete images ("jak korzeń skałę"),
+  no hype, no calques from English. For "solid-state battery" say "bateria ze stałym elektrolitem"
+  (not "półprzewodnikowa", which is a wrong translation). Write numbers and years as digits; the voice reads them.
+  Avoid AI-sounding phrases ("To nie X, to Y", "magia", "bez ściemy", "po ludzku"), do not start sentences
+  with "Bo", avoid lists of exactly three items and very short choppy sentences.
+- `caption` (Polish): 2-4 sentences that add one extra fact, then a question to drive comments.
+  `hashtags`: 8-10, mostly Polish (#technologia #nauka #ciekawostki ...) plus 2-3 English ones for reach.
+  No brand names in hashtags.
 
 ## 3. Voice-over and timings
 ```bash
@@ -66,7 +76,7 @@ python3 tools/tts.py episodes/<dir>              # ElevenLabs when ELEVENLABS_AP
 Needs `ELEVENLABS_API_KEY` and `ELEVENLABS_VOICE_ID` in the environment (given in the task prompt). If ElevenLabs
 fails (quota, network), rerun with `--engine piper` and say so in the final message.
 Output: `voice.wav` and `timeline.json` (beat start/end times and per-word timings). Check the printed duration:
-if it is over 46 s, shorten the script and rerun.
+if it is over 49 s, shorten the script and rerun (each ElevenLabs call costs credits, so count words first).
 
 ## 4. Build the 3D scene
 Write `episodes/<dir>/scene.js` exporting `build(E)` (see "Scene contract" below). Design rules:
@@ -98,7 +108,7 @@ Final check: extract 6 frames from the final MP4 with ffmpeg and look at them; c
 
 ## 6. Deliver
 - Send the final MP4 with SendUserFile (status "proactive", display "attach").
-- Send one SendUserMessage in **Polish** with: topic + one-sentence why it was picked, the ready-to-paste English
+- Send one SendUserMessage in **Polish** with: topic + one-sentence why it was picked, the ready-to-paste Polish
   caption with hashtags (in a code block), the source links, the voice engine used, and anything that went wrong.
 
 ## 7. Save history (only after delivery succeeded)
@@ -141,4 +151,5 @@ Camera keys: `{ beat, at, pos:[x,y,z], target:[x,y,z] }`; `at` = seconds from th
 beat end. Keys are eased in order; a subtle handheld drift is added automatically.
 
 `update(t, B)` must be a pure function of `t` (frames are rendered out of order during tests).
-Look at `episodes/2026-10-28-solid-state-dendrites/scene.js` as a complete reference.
+Look at `episodes/2026-10-28-solid-state-dendrites/scene.js` as a complete reference (Polish callouts and labels).
+Callout and label texts are Polish, in CAPS for the title line; keep them short (max ~16 characters) so cards fit.

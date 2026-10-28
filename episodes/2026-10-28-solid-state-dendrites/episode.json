@@ -11,78 +11,80 @@
     "lithium metal",
     "short circuit"
   ],
-  "cta": "Follow for daily tech, explained in 3D",
+  "cta": "Obserwuj: codziennie technologia w 3D",
   "beats": [
     {
-      "tag": "Batteries",
+      "tag": "Baterie",
       "headline": [
-        "The battery that",
-        "<i class=\"r\">grows trees</i>"
+        "Bateria, w której",
+        "<i class=\"r\">rosną drzewa</i>"
       ],
-      "vo": "The next battery in your phone could store a lot more energy. Its biggest enemy? Tiny trees made of lithium.",
+      "vo": "Następna bateria w twoim telefonie może pomieścić dużo więcej energii. Jej największy wróg? Drzewka z litu.",
       "visual": "Battery cell spins in, cut open like a layer cake, red branches flash inside"
     },
     {
-      "tag": "Lithium-ion today",
+      "tag": "Li-ion dziś",
       "headline": [
-        "Today, ions swim",
-        "through <i class=\"r\">liquid</i>"
+        "Dziś jony płyną",
+        "przez <i class=\"r\">ciecz</i>"
       ],
-      "vo": "In today's lithium-ion cells, lithium ions shuttle between two electrodes through a liquid. And that liquid can burn.",
+      "vo": "Dziś jony litu płyną między elektrodami przez ciecz, która potrafi się zapalić.",
       "visual": "Liquid electrolyte wobbles, ions travel cathode to anode, callouts"
     },
     {
-      "tag": "Solid-state",
+      "tag": "Stały elektrolit",
       "headline": [
-        "Swap the liquid",
-        "for a <i>solid</i>"
+        "Zamiast cieczy",
+        "<i>ceramika</i>"
       ],
-      "vo": "Solid-state batteries swap it for a thin ceramic layer. That allows pure lithium metal, and more energy in the same space.",
+      "vo": "Baterie ze stałym elektrolitem zamieniają ją na cienką ceramikę. Wtedy można użyć czystego litu i zmieścić więcej energii.",
       "visual": "Liquid drains, ceramic slab rises in, anode turns to shiny lithium metal"
     },
     {
-      "tag": "The catch",
+      "tag": "Haczyk",
       "headline": [
-        "The catch:",
-        "<i class=\"r\">dendrites</i>"
+        "Haczyk?",
+        "<i class=\"r\">Dendryty</i>"
       ],
-      "vo": "The catch: while charging, lithium can grow thin branching filaments called dendrites.",
+      "vo": "Haczyk? Podczas ładowania lit wypuszcza cienkie włókna, czyli dendryty.",
       "visual": "Close-up, red-silver branches grow from the anode into the ceramic"
     },
     {
       "tag": "Nature, 2026",
       "headline": [
-        "They <i class=\"r\">crack</i>",
-        "the ceramic"
+        "Rozsadzają",
+        "<i class=\"r\">ceramikę</i>"
       ],
-      "vo": "A 2026 study in Nature showed how they get through. Pressure inside the filament cracks the ceramic, like a root splitting rock. Once it reaches the other side, the cell shorts out.",
+      "vo": "Badanie w Nature z 2026 roku pokazało, że ciśnienie we włóknie rozsadza ceramikę jak korzeń skałę. A gdy włókno przebije się na drugą stronę, następuje zwarcie.",
       "visual": "Cracks race ahead of the dendrite tip, it touches the cathode, spark and flash"
     },
     {
-      "tag": "What's next",
+      "tag": "Co dalej",
       "headline": [
-        "Know the crack,",
-        "<i>stop the crack</i>"
+        "Zrozumieć pęknięcie,",
+        "<i>żeby je zatrzymać</i>"
       ],
-      "vo": "Knowing how it breaks is how engineers learn to stop it. Follow for a new tech explainer every day.",
+      "vo": "Kto rozumie pęknięcie, wie, jak je zatrzymać. Obserwuj, codziennie nowa technologia w 3D.",
       "visual": "Healthy cell, ions flowing again, camera pulls back, CTA"
     }
   ],
-  "caption": "Solid-state batteries swap the flammable liquid inside a lithium-ion cell for a thin ceramic layer, which could mean more energy in the same space. The problem: lithium can grow tiny branching filaments called dendrites. A 2026 study in Nature showed they don't just sneak through the ceramic, pressure inside them actually cracks it, until the cell shorts out. Understanding the crack is the first step to stopping it.\n\nWould you trust a solid-state battery in your next phone? 👇",
+  "caption": "Baterie ze stałym elektrolitem zamieniają łatwopalną ciecz w ogniwie litowo-jonowym na cienką warstwę ceramiki. W tej samej objętości może się wtedy zmieścić więcej energii. Problemem są dendryty, czyli cienkie włókna litu, które rosną podczas ładowania. Badanie opublikowane w 2026 roku w Nature pokazało, że nie przeciskają się one przez ceramikę, tylko dosłownie ją rozsadzają ciśnieniem od środka, aż dojdzie do zwarcia.\n\nZaufałbyś takiej baterii w swoim następnym telefonie? 👇",
   "hashtags": [
+    "#baterie",
+    "#technologia",
+    "#nauka",
+    "#elektronika",
+    "#ciekawostki",
+    "#inżynieria",
     "#solidstatebattery",
-    "#batterytech",
-    "#engineering",
-    "#techexplained",
-    "#science",
-    "#lithium",
-    "#ev",
-    "#3danimation",
-    "#stem"
+    "#samochodyelektryczne",
+    "#3d",
+    "#techexplained"
   ],
   "sources": [
     "https://www.electrive.com/2026/04/27/max-planck-researchers-explain-dendrite-formation-in-solid-state-batteries/",
     "https://www.slashgear.com/1333923/solid-state-batteries-explained/",
     "https://iconnect007.com/article/147579/solidstate-battery-demand-to-surge-to-740-gwh-by-2035-driven-by-rapid-tech-upgrades/147576/milaero"
-  ]
+  ],
+  "language": "pl"
 }
