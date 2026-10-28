@@ -4,10 +4,10 @@
   python3 tools/tts.py episodes/<dir> [--engine elevenlabs|piper]
 
 ElevenLabs (default when ELEVENLABS_API_KEY is set):
-  env ELEVENLABS_API_KEY, ELEVENLABS_VOICE_ID, optional ELEVENLABS_MODEL (default eleven_multilingual_v2)
-Piper (free local fallback): downloads en_US-ljspeech-high into ~/.piper on first use.
-  Voice trained on the public-domain LJ Speech dataset (safe for commercial use; do NOT switch to
-  voices whose model card says NC / non-commercial).
+  env ELEVENLABS_API_KEY, ELEVENLABS_VOICE_ID, optional ELEVENLABS_MODEL (default eleven_multilingual_v2), ELEVENLABS_SPEED (0.7-1.2, default 1.0)
+Piper (free local fallback): downloads pl_PL-darkman-medium into ~/.piper on first use.
+  Polish voice, license CC0 per its model card (safe for commercial use). Do NOT switch to voices whose
+  model card says NC / non-commercial.
 
 Writes <dir>/voice.wav (48 kHz mono, with lead-in) and <dir>/timeline.json:
   {duration, lead, engine, beats:[{start,end}], words:[{w,s,e,beat}]}
@@ -60,7 +60,8 @@ def elevenlabs(text, ep):
     key = os.environ['ELEVENLABS_API_KEY']; voice = os.environ['ELEVENLABS_VOICE_ID']
     model = os.environ.get('ELEVENLABS_MODEL', 'eleven_multilingual_v2')
     body = json.dumps({'text': text, 'model_id': model,
-                       'voice_settings': {'stability': 0.45, 'similarity_boost': 0.8, 'style': 0.15, 'use_speaker_boost': True}}).encode()
+                       'voice_settings': {'stability': 0.45, 'similarity_boost': 0.8, 'style': 0.15, 'use_speaker_boost': True,
+                                          'speed': float(os.environ.get('ELEVENLABS_SPEED', '1.0'))}}).encode()
     req = urllib.request.Request(f'https://api.elevenlabs.io/v1/text-to-speech/{voice}/with-timestamps?output_format=mp3_44100_128',
                                  data=body, headers={'xi-api-key': key, 'Content-Type': 'application/json'})
     with urllib.request.urlopen(req, timeout=180) as r:
@@ -75,10 +76,10 @@ def elevenlabs(text, ep):
 
 
 def piper_voice():
-    d = os.path.expanduser('~/.piper'); m = os.path.join(d, 'en_US-ljspeech-high.onnx')
+    d = os.path.expanduser('~/.piper'); m = os.path.join(d, 'pl_PL-darkman-medium.onnx')
     if not os.path.exists(m):
         os.makedirs(d, exist_ok=True)
-        sh(sys.executable, '-m', 'piper.download_voices', 'en_US-ljspeech-high', '--data-dir', d)
+        sh(sys.executable, '-m', 'piper.download_voices', 'pl_PL-darkman-medium', '--data-dir', d)
     return m
 
 
@@ -88,7 +89,7 @@ def piper(beats, ep):
     for i, b in enumerate(beats):
         vo = re.sub(r'\s+', ' ', b['vo'].strip())
         raw = os.path.join(ep, f'_p{i}.wav')
-        subprocess.run([sys.executable, '-m', 'piper', '-m', model, '--length-scale', '0.87', '-f', raw], input=vo.encode(), check=True, capture_output=True)
+        subprocess.run([sys.executable, '-m', 'piper', '-m', model, '--length-scale', '0.92', '-f', raw], input=vo.encode(), check=True, capture_output=True)
         a, sr = wav_read(raw)
         if sr != SR:
             r48 = raw.replace('.wav', '_48.wav'); to48k(raw, r48); a, _ = wav_read(r48); os.remove(r48)
