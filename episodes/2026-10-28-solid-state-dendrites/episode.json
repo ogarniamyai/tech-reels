@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-28",
+  "slug": "solid-state-dendrites",
+  "title": "Why solid-state batteries crack",
+  "concept": "solid electrolyte batteries and lithium dendrites causing short circuits",
+  "category": "energy",
+  "keywords": [
+    "solid-state battery",
+    "dendrite",
+    "electrolyte",
+    "lithium metal",
+    "short circuit"
+  ],
+  "cta": "Follow for daily tech, explained in 3D",
+  "beats": [
+    {
+      "tag": "Batteries",
+      "headline": [
+        "The battery that",
+        "<i class=\"r\">grows trees</i>"
+      ],
+      "vo": "The next battery in your phone could store a lot more energy. Its biggest enemy? Tiny trees made of lithium.",
+      "visual": "Battery cell spins in, cut open like a layer cake, red branches flash inside"
+    },
+    {
+      "tag": "Lithium-ion today",
+      "headline": [
+        "Today, ions swim",
+        "through <i class=\"r\">liquid</i>"
+      ],
+      "vo": "In today's lithium-ion cells, lithium ions shuttle between two electrodes through a liquid. And that liquid can burn.",
+      "visual": "Liquid electrolyte wobbles, ions travel cathode to anode, callouts"
+    },
+    {
+      "tag": "Solid-state",
+      "headline": [
+        "Swap the liquid",
+        "for a <i>solid</i>"
+      ],
+      "vo": "Solid-state batteries swap it for a thin ceramic layer. That allows pure lithium metal, and more energy in the same space.",
+      "visual": "Liquid drains, ceramic slab rises in, anode turns to shiny lithium metal"
+    },
+    {
+      "tag": "The catch",
+      "headline": [
+        "The catch:",
+        "<i class=\"r\">dendrites</i>"
+      ],
+      "vo": "The catch: while charging, lithium can grow thin branching filaments called dendrites.",
+      "visual": "Close-up, red-silver branches grow from the anode into the ceramic"
+    },
+    {
+      "tag": "Nature, 2026",
+      "headline": [
+        "They <i class=\"r\">crack</i>",
+        "the ceramic"
+      ],
+      "vo": "A 2026 study in Nature showed how they get through. Pressure inside the filament cracks the ceramic, like a root splitting rock. Once it reaches the other side, the cell shorts out.",
+      "visual": "Cracks race ahead of the dendrite tip, it touches the cathode, spark and flash"
+    },
+    {
+      "tag": "What's next",
+      "headline": [
+        "Know the crack,",
+        "<i>stop the crack</i>"
+      ],
+      "vo": "Knowing how it breaks is how engineers learn to stop it. Follow for a new tech explainer every day.",
+      "visual": "Healthy cell, ions flowing again, camera pulls back, CTA"
+    }
+  ],
+  "caption": "Solid-state batteries swap the flammable liquid inside a lithium-ion cell for a thin ceramic layer, which could mean more energy in the same space. The problem: lithium can grow tiny branching filaments called dendrites. A 2026 study in Nature showed they don't just sneak through the ceramic, pressure inside them actually cracks it, until the cell shorts out. Understanding the crack is the first step to stopping it.\n\nWould you trust a solid-state battery in your next phone? 👇",
+  "hashtags": [
+    "#solidstatebattery",
+    "#batterytech",
+    "#engineering",
+    "#techexplained",
+    "#science",
+    "#lithium",
+    "#ev",
+    "#3danimation",
+    "#stem"
+  ],
+  "sources": [
+    "https://www.electrive.com/2026/04/27/max-planck-researchers-explain-dendrite-formation-in-solid-state-batteries/",
+    "https://www.slashgear.com/1333923/solid-state-batteries-explained/",
+    "https://iconnect007.com/article/147579/solidstate-battery-demand-to-surge-to-740-gwh-by-2035-driven-by-rapid-tech-upgrades/147576/milaero"
+  ]
+}

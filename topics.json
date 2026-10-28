@@ -1,0 +1,22 @@
+{
+ "topics": [
+  {
+   "date": "2026-10-28",
+   "slug": "solid-state-dendrites",
+   "title": "Why solid-state batteries crack",
+   "concept": "solid electrolyte batteries and lithium dendrites causing short circuits",
+   "category": "energy",
+   "keywords": [
+    "solid-state battery",
+    "dendrite",
+    "electrolyte",
+    "lithium metal",
+    "short circuit"
+   ],
+   "sources": [
+    "https://www.electrive.com/2026/04/27/max-planck-researchers-explain-dendrite-formation-in-solid-state-batteries/",
+    "https://www.slashgear.com/1333923/solid-state-batteries-explained/"
+   ]
+  }
+ ]
+}
