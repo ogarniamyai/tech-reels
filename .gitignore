@@ -4,4 +4,8 @@ out/
 *.mp4
 *.wav
 *.mp3
+*.hdr
 __pycache__/
+remotion/public/hdri/
+episodes/**/timeline.json
+episodes/**/sfx.json

@@ -1,11 +1,22 @@
 {
   "name": "tech-reels",
   "private": true,
-  "version": "1.0.0",
+  "version": "2.0.0",
   "dependencies": {
-    "three": "0.160.0",
-    "@fontsource/space-grotesk": "5.0.18",
+    "@fontsource/instrument-serif": "5.0.18",
     "@fontsource/jetbrains-mono": "5.0.20",
-    "@fontsource/instrument-serif": "5.0.18"
+    "@fontsource/space-grotesk": "5.0.18",
+    "@react-three/drei": "9.122.0",
+    "@react-three/fiber": "8.18.0",
+    "@react-three/postprocessing": "2.19.1",
+    "@remotion/bundler": "4.0.539",
+    "@remotion/cli": "4.0.539",
+    "@remotion/renderer": "4.0.539",
+    "@remotion/three": "4.0.539",
+    "postprocessing": "6.39.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.539",
+    "three": "0.186.1"
   }
 }
