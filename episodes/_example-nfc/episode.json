@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-30",
+  "slug": "_example-nfc",
+  "title": "How NFC contactless payment works (engine example, not an episode)",
+  "concept": "near field communication inductive coupling between coils for contactless payment",
+  "category": "networking",
+  "keywords": ["nfc", "contactless payment", "inductive coupling", "13.56 MHz"],
+  "language": "pl",
+  "cta": "Obserwuj: codziennie technologia w 3D",
+  "beats": [
+    {
+      "tag": "Płatności",
+      "headline": ["Jak dane skaczą", "<i>przez powietrze</i>?"],
+      "vo": "Przykładasz telefon do terminala i po chwili zapłacone. Ale jak dane przeskakują przez powietrze bez żadnego kabla?",
+      "visual": "Glossy reader with glowing contactless icon, field rings already pulsing, slow orbit"
+    },
+    {
+      "tag": "Terminal",
+      "headline": ["W środku siedzi", "<i>cewka</i>"],
+      "vo": "Pod szybką terminala siedzi cewka, przez którą płynie prąd zmienny o częstotliwości 13,56 megaherca. Wokół niej powstaje pole magnetyczne.",
+      "visual": "Close-up through the real glass top: copper coil lights up, field rings rise"
+    },
+    {
+      "tag": "Zasięg",
+      "headline": ["Działa tylko", "na <i>4 centymetry</i>"],
+      "vo": "To pole bardzo szybko słabnie z odległością, dlatego telefon trzeba zbliżyć na mniej więcej 4 centymetry.",
+      "visual": "Phone flies in from above and hovers, distance label between phone and reader"
+    },
+    {
+      "tag": "Indukcja",
+      "headline": ["Druga cewka", "<i>łapie</i> energię"],
+      "vo": "Wtedy cewka w telefonie łapie część tej energii, podobnie jak w ładowarce indukcyjnej.",
+      "visual": "Low side shot: coil under the phone lights up magenta, callout"
+    },
+    {
+      "tag": "Dane",
+      "headline": ["Dane płyną", "w <i>obie strony</i>"],
+      "vo": "Zmieniając to pole w ułamkach sekundy, oba urządzenia wymieniają zaszyfrowane dane płatności.",
+      "visual": "Particles stream up and down between the coils"
+    },
+    {
+      "tag": "Gotowe",
+      "headline": ["Zapłacone", "w <i>ułamku sekundy</i>"],
+      "vo": "Cała wymiana trwa zwykle ułamek sekundy. Obserwuj, codziennie nowa technologia w 3D.",
+      "visual": "Screen turns to a green check, green shockwave, camera pulls back, CTA"
+    }
+  ],
+  "caption": "Przykładowy odcinek silnika, nie do publikacji.",
+  "hashtags": [],
+  "sources": [
+    "https://sigidwiki.com/wiki/Near_Field_Communication_(NFC)"
+  ]
+}
