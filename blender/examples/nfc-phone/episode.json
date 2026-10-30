@@ -1,0 +1,32 @@
+{
+  "slug": "nfc-phone-pay",
+  "title": "How paying with your phone over NFC works",
+  "concept": "phone NFC payment: reader field, card emulation, tokenization, one-time cryptogram, bank authorization",
+  "language": "pl",
+  "cta": "Obserwuj: codziennie technologia w 3D",
+  "beats": [
+    {"tag": "Płatność telefonem", "headline": ["Pik", "i zapłacone"],
+     "vo": "Przykładasz telefon do terminala, pik i zapłacone. Ale co się właściwie dzieje w tej jednej sekundzie?"},
+    {"tag": "Terminal", "headline": ["Niewidzialne", "pole"],
+     "vo": "W terminalu siedzi cewka, która robi wokół siebie niewidzialne pole magnetyczne. Drga ono ponad 13 milionów razy na sekundę."},
+    {"tag": "Zasięg", "headline": ["Tylko kilka", "centymetrów"],
+     "vo": "Tyle że działa tylko na kilka centymetrów, więc nikt nie zapłaci twoim telefonem z drugiego końca sklepu."},
+    {"tag": "Telefon", "headline": ["Telefon udaje", "kartę"],
+     "vo": "Telefon też ma taką cewkę, zwykle pod tylną ścianką. Kiedy wpadnie w pole, zaczyna udawać zwykłą kartę zbliżeniową."},
+    {"tag": "Bezpieczeństwo", "headline": ["Zamiast numeru", "token"],
+     "vo": "I tu najlepsze: telefon nie wysyła numeru twojej karty. Podaje numer zastępczy, czyli token, plus kod ważny tylko dla tej jednej płatności."},
+    {"tag": "Bank", "headline": ["Bank mówi", "zgoda"],
+     "vo": "Terminal przesyła to do banku, a bank w mgnieniu oka odpowiada: zgoda."},
+    {"tag": "Gotowe", "headline": ["Teraz", "już wiesz"],
+     "vo": "Teraz wiesz, co się dzieje przy każdym piknięciu. Obserwuj, codziennie nowa technologia w 3D."}
+  ],
+  "caption": "Kiedy płacisz telefonem, sklep nigdy nie widzi prawdziwego numeru Twojej karty. Telefon podaje numer zastępczy, czyli token, i jednorazowy kod, który do niczego się nie przyda przy następnych zakupach. Cała rozmowa przez radio trwa krócej niż pół sekundy.\n\nPłacisz częściej kartą czy telefonem? 👇",
+  "hashtags": ["#technologia", "#nfc", "#płatności", "#ciekawostki", "#nauka", "#smartfon", "#jaktodziała", "#bezpieczeństwo", "#tech", "#3d"],
+  "sources": [
+    "https://nfcfyi.com/guide/nfc-payments-how-it-works/",
+    "https://sigidwiki.com/wiki/Near_Field_Communication_(NFC)",
+    "https://aevi.com/newsroom/nfc-mobile-payments-and-security",
+    "https://en.wikipedia.org/wiki/Host_card_emulation",
+    "https://pomcor.com/2014/09/14/apple-pay-emv-and-tokenization/"
+  ]
+}
