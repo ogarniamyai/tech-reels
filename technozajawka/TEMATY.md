@@ -2,10 +2,12 @@
 
 Ten plik czyta i aktualizuje nocne zadanie „Nocna rolka technozajawka”.
 
-**Zasady:**
+**Zasady** (pełny opis w skillu `technozajawka-tematy-rolek`):
+- Kolejność linii w sekcji „Lista” to kolejka. Numer jest tylko stałym identyfikatorem tematu i nie oznacza kolejności.
 - Następna rolka bierze pierwszy temat od góry oznaczony `- [ ]`.
-- Po dostarczeniu rolki temat dostaje `- [x]`, datę i pozę robocika z okładki.
+- Po dostarczeniu rolki temat dostaje `- [x]`, datę i pozę robocika z okładki, a jego linia trafia zaraz pod ostatni zrobiony temat.
 - Gdy temat zostaje pominięty (słaby albo nie da się go zweryfikować), zostaje `- [ ]` z dopiskiem `pominięty RRRR-MM-DD: powód`, a zadanie bierze kolejny.
+- Nowy temat dostaje numer o jeden większy od największego i ląduje zaraz pod ostatnim zrobionym, czyli jako pierwszy niezrobiony.
 - Kolejność możesz zmieniać ręcznie: przesuń linię wyżej, żeby temat poszedł szybciej.
 
 Pozy robocika na okładce: `wychyla się zza górnej krawędzi`, `siedzi i macha`, `zerka zza boku`, `stoi obok i wskazuje`.
