@@ -16,7 +16,7 @@ Pozy robocika na okładce: `wychyla się zza górnej krawędzi`, `siedzi i macha
 
 - [x] 00 | Mikrofalówka: dlaczego grzeje wodę w jedzeniu, a talerz zostaje chłodny | zrobione przed 2026-11-01 | poza: nieznana
 - [x] 01 | Face ID: tysiące niewidzialnych kropek podczerwieni na twarzy | zrobione 2026-11-01 | poza: siedzi i macha
-- [ ] 02 | Kluczyk bezkluczykowy w aucie: jak auto wie, że masz go w kieszeni
+- [x] 02 | Kluczyk bezkluczykowy w aucie: jak auto wie, że masz go w kieszeni | zrobione 2026-11-02 | poza: wychyla się zza górnej krawędzi
 - [ ] 03 | Słuchawki z redukcją szumu: dźwięk, który kasuje dźwięk
 - [ ] 04 | Mapy Google: skąd wiedzą o korku, zanim w nim staniesz
 - [ ] 05 | Płyta indukcyjna: grzeje garnek, a nie płytę
